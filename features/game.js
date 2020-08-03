@@ -6,6 +6,7 @@ module.exports = function(controller) {
 
     ready.say(`Hello Human #${Math.random(5)}. Welcome to HUMAN.IT.`);
     ready.addAction('onboard_name')
+
     ready.addMessage(`We want to thank you for your unique human insight.`, 'onboard_name')
     ready.addMessage(`Before we let you talk to our AI clients, we must complete the onboarding process.`, 'onboard_name')
 
@@ -35,6 +36,7 @@ module.exports = function(controller) {
     ready.addQuestion('Hi human expert. I was communicating with ALEXA #122313 and we were wondering, what does being in love feel like?', async(response, ready, bot) => {
       console.log(`user name is ${ response }`)
     }, 'love', 'client_1')
+
     ready.addMessage('Wow. That sounds very confusing', 'client_1')
     ready.addMessage('CLIENT DISCONNECTED', 'client_1')
 
@@ -48,7 +50,7 @@ module.exports = function(controller) {
     // ready.addMessage(`{{ vars.name }} is your name? Yes or no.`)
     ready.addMessage('THANK YOU', 'client_1')
     ready.addMessage('CLIENT DISCONNECTED', 'client_1')
-
+    ready.addMessage('NO FURTHER CLIENTS WAITING TO BE CONNECTED', 'client_1')
     ready.addAction('client_4')
 
     ready.addMessage('CLIENT CONNECTED', 'client_4')
